@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Print kwitansi {{kwitansiNo}}</title>
+	<title>Print Kwitansi</title>
 	<script>
 		window.print();
 	</script>

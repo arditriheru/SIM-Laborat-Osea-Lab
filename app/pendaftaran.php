@@ -294,8 +294,8 @@
                                                 <td><center><?php echo $d['nama_dokter']; ?></center></td>
                                                 <td>
                                                   <div align="center">
-                                                    <a href="laborat-tambah-form.php?id=<?php echo $d['id_mr_pendaftaran']; ?>"
-                                                      <button type="button" class="btn btn-success"><i class='fa fa-edit'></i></button></a>
+                                                    <a href="pendaftaran-trn-hapus.php?id=<?php echo $d['id_mr_pendaftaran']; ?>" onclick="javascript: return confirm('Anda yakin hapus?')"
+                                                      <button type="button" class="btn btn-danger"><i class='fa fa-trash'></i></button></a>
                                                     </div>
                                                   </td>
                                                   </tr><?php } ?>

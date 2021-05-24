@@ -29,6 +29,7 @@
       }
       if (isset($_POST['tambahsubmit'])) {
         $dx = $_POST['dx'];
+        $id_petugas = $id_petugas;
 
         $data = implode(",", $_POST['tarif']);
 
@@ -53,7 +54,7 @@
               }, 10);
               </script>";
             }else{
-              $simpan=mysqli_query($koneksi,"INSERT INTO lab_trn (id_lab_trn, id_mr_pendaftaran, pemeriksaan, dx, tanggal, jam, total_bayar, selesai)VALUES('','$id_mr_pendaftaran','$data','$dx','$tanggalsekarang','$jamsekarang','$total','0')");
+              $simpan=mysqli_query($koneksi,"INSERT INTO lab_trn (id_lab_trn, id_mr_pendaftaran, id_petugas, pemeriksaan, dx, tanggal, jam, total_bayar, selesai)VALUES('','$id_mr_pendaftaran','$data','$id_petugas','$dx','$tanggalsekarang','$jamsekarang','$total','0')");
 
               mysqli_query($koneksi,"UPDATE mr_pendaftaran SET selesai='1' WHERE id_mr_pendaftaran='$id_mr_pendaftaran'");
               if($simpan){
