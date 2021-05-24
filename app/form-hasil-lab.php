@@ -1,5 +1,27 @@
 <?php error_reporting(0); ?>
 <?php include "views/header.php"; ?>
+<script type="text/javascript">
+	var beforePrint = function() {
+	};
+
+	var afterPrint = function() {
+		document.location.href = '../app/laborat-tampil.php';
+	};
+
+	if (window.matchMedia) {
+		var mediaQueryList = window.matchMedia('print');
+		mediaQueryList.addListener(function(mql) {
+			if (mql.matches) {
+				beforePrint();
+			} else {
+				afterPrint();
+			}
+		});
+	}
+
+	window.onbeforeprint = beforePrint;
+	window.onafterprint = afterPrint;
+</script>
 <body>
 	<script>
 		window.print();
