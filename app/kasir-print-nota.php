@@ -126,7 +126,7 @@
 						$tgl_lahir  = $d['tgl_lahir'];
 						?>
 						<table cellpadding="4">
-							<tr><img class="img-responsive" src="../images/logo.png" width="100%" alt="RS Permata"></tr><hr>
+							<tr><img class="img-responsive" src="../images/logo.png" width="100%" alt="Osea Lab"></tr><hr>
 							<tr>
 								<td width="200px"><div class="lead">No.Kwitansi:</td>
 									<td><div class="value"><?php echo $d['id_lab_trn']; ?></div></td>

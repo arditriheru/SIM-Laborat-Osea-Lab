@@ -19,8 +19,8 @@
     <div class="col-lg-6">
       <div class="bs-example">
         <div class="jumbotron">
-          <h2>Laboratorium RSKIA Permata</h2>
-          <p>Email  : lab.rskia.permata@gmail.com</p>
+          <h2>Osea Laboratorium</h2>
+          <p>Email  : osea_lab@gmail.com</p>
           <p>Telepon : (0274) 415317</p>
         </div>
       </div>

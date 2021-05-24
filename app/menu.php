@@ -10,7 +10,7 @@
     </button>
     <ul class="nav navbar-nav navbar-left navbar-user">
       <a href="https://instagram.com/arditriheru">
-        <img class="img-responsive" src="../images/logo.png" width="100%" alt="RS Permata">
+        <img class="img-responsive" src="../images/logo.png" width="100%" alt="Osea Lab">
       </a>
     </ul>
   </div>

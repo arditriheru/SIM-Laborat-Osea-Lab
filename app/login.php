@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>RSKIA Permata | Login</title>
+	<title>Osea Lab | Login</title>
 	<!-- Login page CSS -->
 	<link rel="stylesheet" type="text/css" href="../vendors/css/style.css">
 	<!-- Bootstrap core CSS -->
