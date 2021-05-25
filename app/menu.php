@@ -32,6 +32,7 @@
         <li><a href="dokter-tambah.php"><i class="fa fa-user-md"></i> Dokter</a></li>
         <li><a href="psdi-petugas.php"><i class="fa fa-user"></i> Petugas</a></li>
         <li><a href="laborat-tarif.php"><i class="fa fa-dollar"></i> Tarif</a></li>
+        <li><a href="dokumentasi.php" target="_blank"><i class="fa fa-file"></i> Dokumentasi</a></li>
         <li><a href="info.php"><i class="fa fa-question-circle"></i> Customer Service</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right navbar-user">

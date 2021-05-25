@@ -65,7 +65,7 @@
 							</row>
 							<center>
 								<div class="row">
-									<img class="img-responsive" src="../images/Kop Surat.jpg" width="100%" alt="Kop Surat Laboratorium">
+									<img class="img-responsive" src="../images/logo.png" width="70%" alt="Kop Surat Laboratorium">
 								</div>
 							</center><br>
 							<div align="center">
