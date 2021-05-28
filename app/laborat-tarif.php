@@ -16,7 +16,7 @@
     </div>
   </div><!-- /.row -->
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-4">
       <form method="post" action="" role="form">
         <div class="form-group">
           <label>Nama Parameter</label>
@@ -52,13 +52,12 @@
           <select class="form-control" type="text" name="kel" required="">
             <option value="">Pilih</option>
             <option value="1">Hematologi</option>
-            <option value="2">Kimia Darah</option>
-            <option value="3">Urine</option>
-            <option value="4">Serologi</option>
-            <option value="5">Lain-lain</option>
+            <option value="2">Kimia Klinik</option>
+            <option value="3">Imunoserologi</option>
+            <option value="4">Lain-lain</option>
           </select>
         </div>
-        <button type="submit" name="tambahsubmit" class="btn btn-success">Submit</button>
+        <button type="submit" name="tambahsubmit" class="btn btn-success">Tambah</button>
       </form>
       <?php
       if(isset($_POST['tambahsubmit'])){
@@ -98,7 +97,7 @@
                   }
                   ?>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                   <div class="table-responsive">
                     <table class="table table-bordered table-hover table-striped tablesorter">
                       <thead>
@@ -108,6 +107,7 @@
                           <th><center>Nilai Normal</center></th>
                           <th><center>Satuan</center></th>
                           <th><center>Tarif</center></th>
+                          <th><center>Kelompok</center></th>
                           <th colspan='2'><center>Action</center></th>
                         </tr>
                       </thead>
@@ -115,7 +115,15 @@
                         <?php 
                         $no = 1;
                         $data = mysqli_query($koneksi,
-                          "SELECT * FROM lab_tarif ORDER BY nama ASC;");
+                          "SELECT *,
+                          CASE
+                          WHEN kel='1' THEN 'Hematologi'
+                          WHEN kel='2' THEN 'Kimia Klinik'
+                          WHEN kel='3' THEN 'Imunoserologi'
+                          WHEN kel='4' THEN 'Lain-lain'
+                          END AS nama_kel
+                          FROM lab_tarif
+                          ORDER BY nama ASC;");
                         while($d = mysqli_fetch_array($data)){
                           ?>
                           <tr>
@@ -124,6 +132,7 @@
                             <td><center><?php echo $d['nilai_normal']; ?></center></td>
                             <td><center><?php echo $d['satuan']; ?></center></td>
                             <td><center><?php echo $d['tarif']; ?></center></td>
+                            <td><center><?php echo $d['nama_kel']; ?></center></td>
                             <td>
                               <div align="center">
                                 <a href="laborat-tarif-edit.php?id=<?php echo $d['id_lab_tarif']; ?>"

@@ -45,7 +45,17 @@
             <label>Tarif</label>
             <input class="form-control" type="number" name="tarif" value="<?php echo $d['tarif'];?>" required="">
           </div>
-          <button type="submit" name="editsubmit" class="btn btn-success">Submit</button>
+          <div class="form-group">
+            <label>Kelompok</label>
+            <select class="form-control" type="text" name="kel" required="">
+              <option value="">Pilih</option>
+              <option value="1">Hematologi</option>
+              <option value="2">Kimia Klinik</option>
+              <option value="3">Imunoserologi</option>
+              <option value="4">Lain-lain</option>
+            </select>
+          </div>
+          <button type="submit" name="editsubmit" class="btn btn-success">Perbarui</button>
           </form><?php } ?>
           <?php
           if(isset($_POST['editsubmit'])){
@@ -53,9 +63,10 @@
             $nilai_normal   = $_POST['nilai_normal'];
             $satuan         = $_POST['satuan'];
             $tarif          = $_POST['tarif'];
+            $kel            = $_POST['kel'];
 
             $simpan=mysqli_query($koneksi,"UPDATE lab_tarif 
-              SET nama='$nama', nilai_normal='$nilai_normal', satuan='$satuan', tarif='$tarif' WHERE id_lab_tarif='$id_lab_tarif'");
+              SET nama='$nama', nilai_normal='$nilai_normal', satuan='$satuan', tarif='$tarif', kel='$kel' WHERE id_lab_tarif='$id_lab_tarif'");
             if($simpan){
               echo '<script>
               setTimeout(function() {

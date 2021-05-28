@@ -146,7 +146,7 @@
                               </div>
                               <div class="col-lg-3">
                                 <div class="form-group">
-                                  <label>KIMIA DARAH</label>
+                                  <label>KIMIA KLINIK</label>
                                   <div class="checkbox">
                                     <?php 
                                     $data = mysqli_query($koneksi,
@@ -162,7 +162,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                   <div class="form-group">
-                                    <label>URINE</label>
+                                    <label>IMUNOSEROLOGI</label>
                                     <div class="checkbox">
                                       <?php 
                                       $data = mysqli_query($koneksi,
@@ -178,7 +178,7 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="form-group">
-                                      <label>SEROLOGI</label>
+                                      <label>LAIN-LAIN</label>
                                       <div class="checkbox">
                                         <?php 
                                         $data = mysqli_query($koneksi,
@@ -194,30 +194,10 @@
                                     </div>
                                   </div>
                                 </div><br>
-                                <div class="row">
-                                  <div class="col-lg-12">
-                                    <div class="col-lg-3">
-                                      <div class="form-group">
-                                        <label>LAIN-LAIN</label>
-                                        <div class="checkbox">
-                                          <?php 
-                                          $data = mysqli_query($koneksi,
-                                            "SELECT * FROM lab_tarif WHERE kel='5';");
-                                            while($d = mysqli_fetch_array($data)){ ?>
-                                              <label>
-                                                <input type="checkbox" name="tarif[]" value="<?=$d['id_lab_tarif']?>"><?=$d['nama']?>
-                                              </label><br>
-                                            <?php }
-                                            ?>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div><br>
-                                  <button type="submit" name="tambahsubmit" class="btn btn-primary">Tambah</button>
-                                  <a href="form-permintaan.php?id=<?php echo $id_lab_trn ?>"><button type="button" class="btn btn-success"><i class="fa fa-print"></i> Print</button></a>
-                                  </form><?php } ?>
-                                </div>
+                                <button type="submit" name="tambahsubmit" class="btn btn-primary">Tambah</button>
+                                <a href="form-permintaan.php?id=<?php echo $id_lab_trn ?>"><button type="button" class="btn btn-success"><i class="fa fa-print"></i> Print</button></a>
+                                </form><?php } ?>
                               </div>
-                            </div><!-- /#page-wrapper -->
-                            <?php include "views/footer.php"; ?>
+                            </div>
+                          </div><!-- /#page-wrapper -->
+                          <?php include "views/footer.php"; ?>
